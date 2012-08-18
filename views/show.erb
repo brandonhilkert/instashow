@@ -6,7 +6,7 @@
   });
 </script>
 
-<div class="headline">@<%= session[:nickname] %></div>
+<div class="headline">@<%= @user.nickname %></div>
 <br />
 <div class="slideshow">
   <% @photos.each do |photo| %>

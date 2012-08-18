@@ -1,3 +1,6 @@
-require './app'
+$: << File.expand_path('../lib', __FILE__)
 
-run Sinatra::Application
+require 'rubygems'
+require 'instashow'
+
+run Instashow::App
