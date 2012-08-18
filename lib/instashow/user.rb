@@ -6,6 +6,10 @@ module Instashow
       @nickname, @access_token = nickname, access_token
     end
 
+    def slideshow_url
+      "http://instashow.me/#{nickname}"
+    end
+
     def self.find_access_token_by_nickname(nickname)
       if Instashow.redis.exists(formalize_key(nickname))
         new nickname, Instashow.redis.hget(formalize_key(nickname), "access_token")

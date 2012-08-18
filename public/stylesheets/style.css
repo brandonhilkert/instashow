@@ -31,6 +31,19 @@ body {
   margin-bottom: 5px;
 }
 
+.share {
+  margin-bottom: 10px;
+}
+
+.share img {
+  vertical-align: middle
+}
+
+.share a {
+  color: #fffcf1;
+  text-decoration: none
+}
+
 .caption {
   margin-bottom: 5px;
 }
@@ -65,4 +78,8 @@ body {
 .footer ul li {
   float: left;
   padding: 0 5px;
+}
+
+.footer ul li iframe {
+  float: left;
 }

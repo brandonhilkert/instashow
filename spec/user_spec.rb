@@ -12,6 +12,13 @@ describe Instashow::User do
       }
     }
 
+  describe "#slideshow_url" do
+    it "should create the correct url" do
+      user = Instashow::User.new("brandon", "23asdfas")
+      user.slideshow_url.should == "http://instashow.me/brandon"
+    end
+  end
+
   describe ".find_access_token_by_nickname" do
     before(:each) do
       Instashow::User.create(omniauth)

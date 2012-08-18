@@ -7,7 +7,18 @@
 </script>
 
 <div class="headline">@<%= @user.nickname %></div>
-<br />
+<div class="share">
+  Share this slideshow on:
+  <a target="_blank" href="http://www.facebook.com/sharer.php?u=<%= @user.slideshow_url %>" title="Click to share this slideshow on Facebook">
+    <img src="/images/facebook.png" width="32" height="32" alt="Facebook" />
+  </a>
+  <a target="_blank" href="http://twitter.com/share?text=Check out my latest Instashow.&url=<%= @user.slideshow_url %>" title="Click to share this slideshow on Twitter">
+    <img src="/images/twitter.png" width="32" height="32" alt="Twitter" />
+  </a>
+  <br />
+  <a href="<%= @user.slideshow_url %>" /><%= @user.slideshow_url %></a>
+</div>
+
 <div class="slideshow">
   <% @photos.each do |photo| %>
     <div>
