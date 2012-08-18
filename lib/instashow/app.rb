@@ -8,7 +8,7 @@ module Instashow
     end
 
     use OmniAuth::Builder do
-      provider :instagram, "5010d455f7e3477d903380e6e1619e32", "d4f6d96e9829494c9babf20cb2579724"
+      provider :instagram, Instashow.config["INSTAGRAM_CLIENT_ID"], Instashow.config["INSTAGRAM_CLIENT_SECRET"]
     end
 
     get '/' do

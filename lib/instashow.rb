@@ -10,9 +10,19 @@ module Instashow
     @env ||= (ENV['RACK_ENV'] || 'development')
   end
 
+  def self.config
+    config_file = Pathname.new File.join(root, "config", "local_settings.yml")
+
+    if config_file.file?
+      YAML.load(ERB.new(config_file.read).result)[env]
+    else
+      ENV
+    end
+  end
+
   def self.redis
     @redis ||= (
-      url = URI(ENV['REDISTOGO_URL'] || "redis://127.0.0.1:6379")
+      url = URI(config["REDIS_URL"] || config['REDISTOGO_URL'])
 
       base_settings = {
         host: url.host,
