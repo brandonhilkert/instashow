@@ -12,6 +12,10 @@ body {
   text-align: center;
 }
 
+.content {
+  min-height: 650px;
+}
+
 .headline {
   font-size: 2em;
 }
@@ -59,6 +63,11 @@ body {
   margin-top: 20px;
 }
 
+.footer img {
+  max-width: 24px;
+  max-height: 24px;
+}
+
 .footer a {
   color: #4d4a42;
   text-decoration: none;
@@ -68,10 +77,9 @@ body {
   text-decoration: underline;
 }
 
-
 .footer ul {
   margin: 10px auto 20px;
-  width: 400px;
+  width: 450px;
   list-style: none
 }
 
