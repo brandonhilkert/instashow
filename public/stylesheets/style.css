@@ -5,6 +5,7 @@ body {
   color: #fffcf1;
 }
 .clear { clear: both; }
+.tagline { color: #4d4a42; font-size: 1.1em; }
 
 .container {
   width: 615px;
@@ -12,21 +13,11 @@ body {
   text-align: center;
 }
 
-.content {
-  min-height: 650px;
-}
-
-.headline {
-  font-size: 2em;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.slideshow {
-  min-height: 650px;
-}
+.content { min-height: 650px; }
+.landing { padding-top: 250px; }
+.headline { font-size: 2em; }
+.text-left { text-align: left; }
+.slideshow { min-height: 650px; }
 
 .slideshow img {
   -webkit-border-radius: 3px;
