@@ -25,7 +25,7 @@ module Instashow
 
     get '/auth/instagram/callback' do
       user = Instashow::User.create(request.env["omniauth.auth"])
-      puts request.env["omniauth.auth"]["credentials"]["token"]
+      session[:created_slideshow] = true
       redirect to("/#{user.nickname}")
     end
 

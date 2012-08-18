@@ -4,6 +4,13 @@
       fx: "fade"
     });
   });
+
+  mixpanel.track("View Slideshow", { nickname: "<%= @user.nickname %>" });
+
+  <% if session[:created_slideshow] %>
+    mixpanel.track("Created Slideshow", { nickname: "<%= @user.nickname %>" });
+    <% session[:created_slideshow] = nil %>
+  <% end %>
 </script>
 
 <div class="headline">@<%= @user.nickname %></div>
