@@ -15,6 +15,14 @@ module Instashow
       erb :index
     end
 
+    get '/terms' do
+      erb :terms
+    end
+
+    get '/privacy' do
+      erb :privacy
+    end
+
     get '/auth/instagram/callback' do
       user = Instashow::User.create(request.env["omniauth.auth"])
       puts request.env["omniauth.auth"]["credentials"]["token"]

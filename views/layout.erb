@@ -10,6 +10,17 @@
   <body>
     <div class="container">
       <%= yield %>
+      <br class="clear" />
+      <div class="footer">
+        <ul>
+          <li><a href="/">&copy;<%= Date.today.year %> Instashow.me</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="mailto:info@@instashow.me">Contact</a></li>
+          <li><a href="http://twitter.com/brandonhilkert" target="_blank">@brandonhilkert</a></li>
+        </ul>
+        <br class="clear" />
+      </div>
     </div>
   </body>
 </html>

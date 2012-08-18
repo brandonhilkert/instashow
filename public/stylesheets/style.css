@@ -4,16 +4,24 @@ body {
   font-weight: 100;
   color: #fffcf1;
 }
+.clear { clear: both; }
 
 .container {
-  width: 620px;
+  width: 615px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 50px;
 }
 
 .headline {
   font-size: 2em;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.slideshow {
+  min-height: 650px;
 }
 
 .slideshow img {
@@ -29,4 +37,32 @@ body {
 
 .date {
   color: #4d4a42;
+}
+
+.footer {
+  border-top: 1px solid #4d4a42;
+  color: #4d4a42;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+.footer a {
+  color: #4d4a42;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+.footer ul {
+  margin: 10px auto 20px;
+  width: 400px;
+  list-style: none
+}
+
+.footer ul li {
+  float: left;
+  padding: 0 5px;
 }
