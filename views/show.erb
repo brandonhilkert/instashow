@@ -1,0 +1,22 @@
+<script type="text/javascript">
+  $(function() {
+    $(".slideshow").cycle({
+      fx: "fade"
+    });
+  });
+</script>
+
+<div class="headline">@<%= session[:nickname] %></div>
+<br />
+<div class="slideshow">
+  <% @photos.each do |photo| %>
+    <div>
+      <img src="<%= photo.images.standard_resolution.url %>" width="<%= photo.images.standard_resolution.width %>" height="<%= photo.images.standard_resolution.height %>" />
+      <br />
+      <% if photo.caption %>
+        <div class="caption"><%= photo.caption.text %></div>
+      <% end %>
+      <div class="date"><%= Time.at(photo.created_time.to_i).strftime("%b %-d, %Y") %></div>
+    </div>
+  <% end %>
+</div>

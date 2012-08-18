@@ -1,0 +1,32 @@
+body {
+  background-color: #1e1e1e;
+  font-family: "Myriad Pro Condensed", "Gill Sans", "Lucida Grande", Helvetica, sans-serif;
+  font-weight: 100;
+  color: #fffbeb;
+}
+
+.container {
+  width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.headline {
+  font-size: 2em;
+}
+
+.slideshow img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.caption {
+  margin-bottom: 5px;
+}
+
+.date {
+  color: #4d4a42;
+}
